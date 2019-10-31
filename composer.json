@@ -1,0 +1,12 @@
+{
+    "name": "tazya/hexlet-project-lvl1",
+    "description": "This is Brain Games for a command line",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Pavel Chernyshev",
+            "email": "vengador32@gmail.com"
+        }
+    ],
+    "require": {}
+}
