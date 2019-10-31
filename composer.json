@@ -8,5 +8,7 @@
             "email": "vengador32@gmail.com"
         }
     ],
+    "bin": ["bin/brain-games"],
+    "minimum-stability": "dev",
     "require": {}
 }
