@@ -16,5 +16,11 @@
     },
     "autoload": {
         "files": ["src/Cli.php"]
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "^3.0@dev"
+    },
+    "scripts": {
+	    "phpcs": "vendor/squizlabs/php_codesniffer/bin/phpcs"
     }
 }
