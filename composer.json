@@ -11,5 +11,10 @@
     "bin": ["bin/brain-games"],
     "minimum-stability": "dev",
     "license": "MIT",
-    "require": {}
+    "require": {
+        "wp-cli/php-cli-tools": "dev-master"
+    },
+    "autoload": {
+        "files": ["src/Cli.php"]
+    }
 }
