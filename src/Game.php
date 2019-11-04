@@ -23,7 +23,8 @@ function startGame(string $name)
         if ($answer !== $correct) {
             line(
                 "'%s' is wrong answer ;(. Correct answer was '%s'.",
-                $answer, $correct
+                $answer,
+                $correct
             );
             line("Let's try again, %s!", $name);
             return false;
