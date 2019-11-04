@@ -9,7 +9,6 @@
         }
     ],
     "bin": ["bin/brain-games", "bin/brain-even"],
-    "minimum-stability": "dev",
     "license": "MIT",
     "require": {
         "wp-cli/php-cli-tools": "dev-master"
