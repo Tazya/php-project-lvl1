@@ -10,10 +10,10 @@
             "email": "vengador32@gmail.com"
         }
     ],
-    "bin": ["bin/brain-games", "bin/brain-even"],
+    "bin": ["bin/brain-even"],
     "license": "MIT",
     "require": {
-        "wp-cli/php-cli-tools": ">=0.11.11",
+        "wp-cli/php-cli-tools": "^0.11.11",
         "php": ">=5.4.0"
     },
     "autoload": {
@@ -23,6 +23,6 @@
         "squizlabs/php_codesniffer": "^3.0@dev"
     },
     "scripts": {
-	    "phpcs": "vendor/squizlabs/php_codesniffer/bin/phpcs"
+	    "phpcs": "phpcs"
     }
 }
