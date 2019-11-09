@@ -1,7 +1,7 @@
 {
     "name": "tazya/hexlet-project-lvl1",
     "description": "This is Brain Games for a command line",
-    "type": "library",
+    "type": "project",
     "minimum-stability": "dev",
     "prefer-stable": true,
     "authors": [
