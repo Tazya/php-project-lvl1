@@ -2,11 +2,15 @@
 
 <?php
 
-$autoloadPath = __DIR__ . '/../vendor/autoload.php';
+$autoloadPathLocal = __DIR__ . '/../vendor/autoload.php';
+$autoloadPathGlobal = __DIR__ . '/../../../autoload.php';
 
-if(file_exists($autoloadPath)) {
-    require_once $autoloadPath;
+if (file_exists($autoloadPathLocal)) {
+    require_once $autoloadPathLocal;
+} else {
+    require_once $autoloadPathGlobal;
 }
+
 
 use function BrainGames\Cli\run;
 
