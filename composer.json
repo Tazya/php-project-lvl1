@@ -8,7 +8,7 @@
             "email": "vengador32@gmail.com"
         }
     ],
-    "bin": ["bin/brain-even", "bin/brain-calc"],
+    "bin": ["bin/brain-even", "bin/brain-calc", "bin/brain-gcd"],
     "license": "MIT",
     "require": {
         "wp-cli/php-cli-tools": "^0.11.11",
@@ -18,7 +18,8 @@
         "files": [
             "src/Cli.php",
             "src/games/EvenGame.php",
-            "src/games/CalcGame.php"
+            "src/games/CalcGame.php",
+            "src/games/GcdGame.php"
         ]
     },
     "require-dev": {

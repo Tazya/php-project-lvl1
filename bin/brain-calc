@@ -21,4 +21,4 @@ $game = game();
 $rules = getRules();
 
 $name = welcome($rules);
-$result = run($game, $name);
+run($game, $name);
