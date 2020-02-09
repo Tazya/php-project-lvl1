@@ -15,7 +15,10 @@
         "php": ">=5.4.0"
     },
     "autoload": {
-        "files": ["src/Cli.php", "src/Game.php"]
+        "files": [
+            "src/Cli.php",
+            "src/games/EvenGame.php"
+        ]
     },
     "require-dev": {
         "squizlabs/php_codesniffer": "^3.0@dev"

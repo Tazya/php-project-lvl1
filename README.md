@@ -7,4 +7,4 @@
 
 ## Brain Even Game
 Use ```brain-even``` command to start   
-[![asciicast](https://asciinema.org/a/4xQK9DsSAW4sOO6eDbafs22lK.svg)](https://asciinema.org/a/4xQK9DsSAW4sOO6eDbafs22lK)
+[![asciicast](https://asciinema.org/a/4xQK9DsSAW4sOO6eDbafs22lK.svg)](https://asciinema.org/a/4xQK9DsSAW4sOO6eDbafs22lK?autoplay=1)
