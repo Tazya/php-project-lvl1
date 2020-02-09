@@ -5,7 +5,7 @@ namespace BrainGames\Cli;
 use function cli\line;
 use function cli\prompt;
 
-function run($game, string $rules)
+function welcome($rules)
 {
     line('Welcome to the Brain Game!');
     line($rules);
@@ -13,18 +13,20 @@ function run($game, string $rules)
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
 
-    $limit = 3;
+    return $name;
+}
 
-    for ($i = 0; $i < $limit; $i++) {
-        $current = $game();
-        line('Question: %s', $current['question']);
+function run(array $game, string $name)
+{
+    foreach ($game as $turn) {
+        line('Question: %s', $turn['question']);
         $answer = prompt('Your answer');
 
-        if ($answer !== $current['correct']) {
+        if ($answer !== $turn['correct']) {
             line(
                 "'%s' is wrong answer ;(. Correct answer was '%s'.",
                 $answer,
-                $current['correct']
+                $turn['correct']
             );
 
             line("Let's try again, %s!", $name);
@@ -32,7 +34,7 @@ function run($game, string $rules)
         }
         line("Correct!");
     }
-
+    
     line("Congratulations, %s!", $name);
     return true;
 }

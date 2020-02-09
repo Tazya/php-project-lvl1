@@ -14,8 +14,8 @@ if (file_exists($autoloadPathLocal)) {
 
 use function BrainGames\Cli\run;
 use function BrainGames\Cli\welcome;
-use function BrainGames\Games\EvenGame\game;
-use function BrainGames\Games\EvenGame\getRules;
+use function BrainGames\Games\CalcGame\game;
+use function BrainGames\Games\CalcGame\getRules;
 
 $game = game();
 $rules = getRules();
