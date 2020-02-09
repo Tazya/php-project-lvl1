@@ -2,9 +2,6 @@
 
 namespace BrainGames\Games\GcdGame;
 
-use function cli\line;
-use function cli\prompt;
-
 function getRules()
 {
     return 'Find the greatest common divisor of given numbers.';

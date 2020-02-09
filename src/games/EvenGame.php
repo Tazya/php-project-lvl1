@@ -2,9 +2,6 @@
 
 namespace BrainGames\Games\EvenGame;
 
-use function cli\line;
-use function cli\prompt;
-
 function isEven(int $num)
 {
     return $num % 2 === 0;

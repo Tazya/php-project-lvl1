@@ -1,0 +1,24 @@
+#!/bin/php
+
+<?php
+
+$autoloadPathLocal = __DIR__ . '/../vendor/autoload.php';
+$autoloadPathGlobal = __DIR__ . '/../../../autoload.php';
+
+if (file_exists($autoloadPathLocal)) {
+    require_once $autoloadPathLocal;
+} else {
+    require_once $autoloadPathGlobal;
+}
+
+
+use function BrainGames\Cli\run;
+use function BrainGames\Cli\welcome;
+use function BrainGames\Games\ProgressionGame\game;
+use function BrainGames\Games\ProgressionGame\getRules;
+
+$game = game();
+$rules = getRules();
+
+$name = welcome($rules);
+run($game, $name);
