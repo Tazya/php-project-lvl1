@@ -21,3 +21,6 @@ Use ```brain-even``` command to start
 ## Calc Game
 Use ```brain-calc``` command to start   
 [![asciicast](https://asciinema.org/a/HOAmN7fuhh2puNumrmB63x2sI.svg)](https://asciinema.org/a/HOAmN7fuhh2puNumrmB63x2sI)   
+##  GCD Game
+Use ```brain-gcd``` command to start   
+[![asciicast](https://asciinema.org/a/apISd4GA0FOqYSPwxuC1oKPkT.svg)](https://asciinema.org/a/apISd4GA0FOqYSPwxuC1oKPkT)  
