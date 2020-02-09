@@ -12,7 +12,8 @@
         "bin/brain-even",
         "bin/brain-calc",
         "bin/brain-gcd",
-        "bin/brain-progression"
+        "bin/brain-progression",
+        "bin/brain-prime"
     ],
     "license": "MIT",
     "require": {
@@ -25,7 +26,8 @@
             "src/games/EvenGame.php",
             "src/games/CalcGame.php",
             "src/games/GcdGame.php",
-            "src/games/ProgressionGame.php"
+            "src/games/ProgressionGame.php",
+            "src/games/PrimeGame.php"
         ]
     },
     "require-dev": {
