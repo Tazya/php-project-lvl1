@@ -27,3 +27,6 @@ Use ```brain-gcd``` command to start
 ##  Progression Game
 Use ```brain-progression``` command to start  
 [![asciicast](https://asciinema.org/a/yuxo7H3ze98tOU5XWtGIlICMl.svg)](https://asciinema.org/a/yuxo7H3ze98tOU5XWtGIlICMl)  
+##  Prime Game
+Use ```brain-prime``` command to start  
+[![asciicast](https://asciinema.org/a/qDxzdXQ2ufbHHC7TakboxopfF.svg)](https://asciinema.org/a/qDxzdXQ2ufbHHC7TakboxopfF)
