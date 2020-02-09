@@ -24,3 +24,6 @@ Use ```brain-calc``` command to start
 ##  GCD Game
 Use ```brain-gcd``` command to start   
 [![asciicast](https://asciinema.org/a/apISd4GA0FOqYSPwxuC1oKPkT.svg)](https://asciinema.org/a/apISd4GA0FOqYSPwxuC1oKPkT)  
+##  Progression Game
+Use ```brain-progression``` command to start  
+[![asciicast](https://asciinema.org/a/yuxo7H3ze98tOU5XWtGIlICMl.svg)](https://asciinema.org/a/yuxo7H3ze98tOU5XWtGIlICMl)  
