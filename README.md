@@ -17,16 +17,16 @@ composer global require tazya/brain-games
 
 ## Brain Even Game
 Use ```brain-even``` command to start   
-[![asciicast](https://asciinema.org/a/NFQNZvlkCRe2Cd34tj2BBL6pn.svg)](https://asciinema.org/a/NFQNZvlkCRe2Cd34tj2BBL6pn)  
+[![asciicast](https://asciinema.org/a/299658.svg)](https://asciinema.org/a/299658)  
 ## Calc Game
 Use ```brain-calc``` command to start   
-[![asciicast](https://asciinema.org/a/HOAmN7fuhh2puNumrmB63x2sI.svg)](https://asciinema.org/a/HOAmN7fuhh2puNumrmB63x2sI)   
+[![asciicast](https://asciinema.org/a/299661.svg)](https://asciinema.org/a/299661)   
 ##  GCD Game
 Use ```brain-gcd``` command to start   
-[![asciicast](https://asciinema.org/a/apISd4GA0FOqYSPwxuC1oKPkT.svg)](https://asciinema.org/a/apISd4GA0FOqYSPwxuC1oKPkT)  
+[![asciicast](https://asciinema.org/a/299664.svg)](https://asciinema.org/a/299664)  
 ##  Progression Game
 Use ```brain-progression``` command to start  
-[![asciicast](https://asciinema.org/a/yuxo7H3ze98tOU5XWtGIlICMl.svg)](https://asciinema.org/a/yuxo7H3ze98tOU5XWtGIlICMl)  
+[![asciicast](https://asciinema.org/a/299665.svg)](https://asciinema.org/a/299665)  
 ##  Prime Game
 Use ```brain-prime``` command to start  
-[![asciicast](https://asciinema.org/a/qDxzdXQ2ufbHHC7TakboxopfF.svg)](https://asciinema.org/a/qDxzdXQ2ufbHHC7TakboxopfF)
+[![asciicast](https://asciinema.org/a/299663.svg)](https://asciinema.org/a/299663) 
