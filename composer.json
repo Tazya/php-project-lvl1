@@ -2,6 +2,9 @@
     "name": "tazya/brain-games",
     "description": "This is Brain Games for a command line",
     "type": "project",
+    "version": "0.1.0",
+    "keywords": ["game", "hexlet", "cli"],
+    "license": "MIT",
     "authors": [
         {
             "name": "Pavel Chernyshev",
@@ -15,7 +18,6 @@
         "bin/brain-progression",
         "bin/brain-prime"
     ],
-    "license": "MIT",
     "require": {
         "wp-cli/php-cli-tools": "^0.11.11",
         "php": ">=7.1.0"
@@ -23,6 +25,7 @@
     "autoload": {
         "files": [
             "src/Cli.php",
+            "src/Flow.php",
             "src/games/EvenGame.php",
             "src/games/CalcGame.php",
             "src/games/GcdGame.php",

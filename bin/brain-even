@@ -12,13 +12,10 @@ if (file_exists($autoloadPathLocal)) {
 }
 
 
-use function BrainGames\Cli\run;
-use function BrainGames\Cli\welcome;
-use function BrainGames\Games\EvenGame\game;
+use function BrainGames\Flow\run;
+use function BrainGames\Games\EvenGame\getGame;
 use function BrainGames\Games\EvenGame\getRules;
 
-$game = game();
+$game = getGame();
 $rules = getRules();
-
-$name = welcome($rules);
-run($game, $name);
+run($game, $rules);

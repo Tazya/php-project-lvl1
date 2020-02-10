@@ -48,3 +48,13 @@ function game()
 
     return $result;
 }
+
+function getGame()
+{
+    $game = function () {
+        $gameRound = getQuestionAndCorrect();
+        return $gameRound;
+    };
+
+    return $game;
+}

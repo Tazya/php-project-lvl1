@@ -34,19 +34,18 @@ function isPrime($num)
     return true;
 }
 
-function game()
+function getGame()
 {
-    $iterations = 3;
-
-    $result = [];
-    for ($i = 0; $i < $iterations; $i++) {
+    $game = function () {
         $question = getQuestion();
         $correct = getCorrect($question);
-        $result[] = [
+
+        $gameRound = [
             'question' => $question,
             'correct' => $correct
         ];
-    }
+        return $gameRound;
+    };
 
-    return $result;
+    return $game;
 }
