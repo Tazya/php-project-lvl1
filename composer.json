@@ -2,7 +2,7 @@
     "name": "tazya/brain-games",
     "description": "This is Brain Games for a command line",
     "type": "project",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "keywords": ["game", "hexlet", "cli"],
     "license": "MIT",
     "authors": [
@@ -24,13 +24,12 @@
     },
     "autoload": {
         "files": [
-            "src/Cli.php",
             "src/Flow.php",
-            "src/games/EvenGame.php",
-            "src/games/CalcGame.php",
-            "src/games/GcdGame.php",
-            "src/games/ProgressionGame.php",
-            "src/games/PrimeGame.php"
+            "src/games/Even.php",
+            "src/games/Calc.php",
+            "src/games/Gcd.php",
+            "src/games/Progression.php",
+            "src/games/Prime.php"
         ]
     },
     "require-dev": {

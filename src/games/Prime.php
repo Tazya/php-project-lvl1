@@ -1,18 +1,10 @@
 <?php
 
-namespace BrainGames\Games\PrimeGame;
+namespace BrainGames\Games\Prime;
 
-function getRules()
-{
-    return 'Answer "yes" if given number is prime. Otherwise answer "no".';
-}
+use function BrainGames\Flow\run;
 
-function getQuestion()
-{
-    $question = rand(1, 99);
-
-    return $question;
-}
+const GAME_RULES = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
 function getCorrect($question)
 {
@@ -34,10 +26,10 @@ function isPrime($num)
     return true;
 }
 
-function getGame()
+function startGame()
 {
     $game = function () {
-        $question = getQuestion();
+        $question = rand(1, 99);
         $correct = getCorrect($question);
 
         $gameRound = [
@@ -47,5 +39,5 @@ function getGame()
         return $gameRound;
     };
 
-    return $game;
+    run($game, GAME_RULES);
 }

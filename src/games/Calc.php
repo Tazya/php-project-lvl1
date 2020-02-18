@@ -1,11 +1,10 @@
 <?php
 
-namespace BrainGames\Games\CalcGame;
+namespace BrainGames\Games\Calc;
 
-function getRules()
-{
-    return 'What is the result of the expression?';
-}
+use function BrainGames\Flow\run;
+
+const GAME_RULES = 'What is the result of the expression?';
 
 function getExpression()
 {
@@ -42,7 +41,7 @@ function getCorrect(string $expression)
     return (string) $correct;
 }
 
-function getGame()
+function startGame()
 {
     $game = function () {
         $question = getExpression();
@@ -55,5 +54,5 @@ function getGame()
         return $gameRound;
     };
 
-    return $game;
+    run($game, GAME_RULES);
 }

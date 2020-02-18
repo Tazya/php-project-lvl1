@@ -1,11 +1,10 @@
 <?php
 
-namespace BrainGames\Games\ProgressionGame;
+namespace BrainGames\Games\Progression;
 
-function getRules()
-{
-    return 'What number is missing in the progression?';
-}
+use function BrainGames\Flow\run;
+
+const GAME_RULES = 'What number is missing in the progression?';
 
 function getProgression(int $start, int $add, $length = 10)
 {
@@ -37,24 +36,12 @@ function getQuestionAndCorrect()
     ];
 }
 
-function game()
-{
-    $iterations = 3;
-
-    $result = [];
-    for ($i = 0; $i < $iterations; $i++) {
-        $result[] = getQuestionAndCorrect();
-    }
-
-    return $result;
-}
-
-function getGame()
+function startGame()
 {
     $game = function () {
         $gameRound = getQuestionAndCorrect();
         return $gameRound;
     };
 
-    return $game;
+    run($game, GAME_RULES);
 }

@@ -2,34 +2,38 @@
 
 namespace BrainGames\Flow;
 
-use function BrainGames\Cli\showRules;
-use function BrainGames\Cli\askName;
-use function BrainGames\Cli\showQuestion;
-use function BrainGames\Cli\askAnswer;
-use function BrainGames\Cli\showCorrect;
-use function BrainGames\Cli\showWrong;
-use function BrainGames\Cli\showCongratulations;
+use function cli\line;
+use function cli\prompt;
 
 const MAX_GAME_ROUNDS = 3;
 
 function run(callable $game, string $rules)
 {
-    showRules($rules);
-    $name = askName();
+    line('Welcome to the Brain Game!');
+    line($rules);
+
+    $name = prompt('May I have your name?');
+    line("Hello, %s!", $name);
 
     for ($i = 0; $i < MAX_GAME_ROUNDS; $i++) {
         $gameRound = $game();
         $question = $gameRound['question'];
         $correct = $gameRound['correct'];
         
-        showQuestion($question);
-        $answer = askAnswer();
+        line('Question: %s', $question);
+        $answer = prompt('Your answer');
 
         if ($answer !== $correct) {
-            showWrong($answer, $correct);
+            line(
+                "'%s' is wrong answer ;(. Correct answer was '%s'.",
+                $answer,
+                $correct
+            );
             return false;
         }
-        showCorrect();
+
+        line("Correct!");
     }
-    showCongratulations($name);
+
+    line("Congratulations, %s!", $name);
 }

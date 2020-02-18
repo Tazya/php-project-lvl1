@@ -1,4 +1,4 @@
-#!/bin/php
+#!/usr/bin/env php
 
 <?php
 
@@ -11,11 +11,6 @@ if (file_exists($autoloadPathLocal)) {
     require_once $autoloadPathGlobal;
 }
 
+use function BrainGames\Games\Even\startGame;
 
-use function BrainGames\Flow\run;
-use function BrainGames\Games\EvenGame\getGame;
-use function BrainGames\Games\EvenGame\getRules;
-
-$game = getGame();
-$rules = getRules();
-run($game, $rules);
+startGame();
