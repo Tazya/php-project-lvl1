@@ -2,7 +2,7 @@
     "name": "tazya/brain-games",
     "description": "This is Brain Games for a command line",
     "type": "project",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "keywords": ["game", "hexlet", "cli"],
     "license": "MIT",
     "authors": [
