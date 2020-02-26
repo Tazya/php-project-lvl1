@@ -11,6 +11,6 @@ if (file_exists($autoloadPathLocal)) {
     require_once $autoloadPathGlobal;
 }
 
-use function BrainGames\Games\Prime\startGame;
+use function BrainGames\games\Prime\startGame;
 
 startGame();

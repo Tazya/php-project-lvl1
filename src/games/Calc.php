@@ -1,10 +1,10 @@
 <?php
 
-namespace BrainGames\Games\Calc;
+namespace BrainGames\games\Calc;
 
 use function BrainGames\Flow\run;
 
-const GAME_RULES = 'What is the result of the expression?';
+const GAME_TASK = 'What is the result of the expression?';
 
 function getExpression()
 {
@@ -12,47 +12,43 @@ function getExpression()
     $num2 = rand(1, 10);
 
     $operators = ['+', '-', '*'];
-    $operatorIndex = rand(0, count($operators) - 1);
+    $operator = array_rand(array_flip($operators));
 
-    $operator = $operators[$operatorIndex];
-
-    return "{$num1} {$operator} {$num2}";
+    return "$num1 $operator $num2";
 }
 
-function getCorrect(string $expression)
+function getCorrectAnswer(string $expression)
 {
     $exploded = explode(" ", $expression);
-    $num1 = $exploded[0];
-    $num2 = $exploded[2];
-    $operator = $exploded[1];
+    [$num1, $operator, $num2] = $exploded;
 
     switch ($operator) {
         case '+':
-            $correct = $num1 + $num2;
+            $correctAnswer = $num1 + $num2;
             break;
         case '-':
-            $correct = $num1 - $num2;
+            $correctAnswer = $num1 - $num2;
             break;
         case '*':
-            $correct = $num1 * $num2;
+            $correctAnswer = $num1 * $num2;
             break;
     }
 
-    return (string) $correct;
+    return (string) $correctAnswer;
 }
 
 function startGame()
 {
-    $game = function () {
+    $makeGameRound = function () {
         $question = getExpression();
-        $correct = getCorrect($question);
+        $correctAnswer = getCorrectAnswer($question);
 
         $gameRound = [
             'question' => $question,
-            'correct' => $correct
+            'correctAnswer' => $correctAnswer
         ];
         return $gameRound;
     };
 
-    run($game, GAME_RULES);
+    run($makeGameRound, GAME_TASK);
 }

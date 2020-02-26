@@ -1,29 +1,31 @@
 <?php
 
-namespace BrainGames\Games\Progression;
+namespace BrainGames\games\Progression;
 
 use function BrainGames\Flow\run;
 
-const GAME_RULES = 'What number is missing in the progression?';
+const GAME_TASK = 'What number is missing in the progression?';
 
-function getProgression(int $start, int $add, $length = 10)
+function getProgression(int $start, int $add, int $progressionLength)
 {
     $progression = [];
-    for ($i = 0, $current = $start; $i < $length; $i++, $current += $add) {
+    for ($i = 0, $current = $start; $i < $progressionLength; $i++, $current += $add) {
         $progression[] = $current;
     }
     return $progression;
 }
 
-function getQuestionAndCorrect()
+function makeGameRound()
 {
     $start = rand(0, 99);
     $add = rand(1, 10);
-    $progression = getProgression($start, $add);
+    $progressionLength = 10;
 
-    $hiddenIndex = rand(0, count($progression) - 1);
+    $progression = getProgression($start, $add, $progressionLength);
 
-    $correct = (string) $progression[$hiddenIndex];
+    $hiddenIndex = array_rand($progression);
+
+    $correctAnswer = (string) $progression[$hiddenIndex];
     
     $maskedProgression = $progression;
     $maskedProgression[$hiddenIndex] = '..';
@@ -31,17 +33,16 @@ function getQuestionAndCorrect()
     $question = implode(' ', $maskedProgression);
 
     return [
-        'correct' => $correct,
-        'question' => $question
+        'question' => $question,
+        'correctAnswer' => $correctAnswer
     ];
 }
 
 function startGame()
 {
-    $game = function () {
-        $gameRound = getQuestionAndCorrect();
-        return $gameRound;
+    $makeGameRound = function () {
+        return makeGameRound();
     };
 
-    run($game, GAME_RULES);
+    run($makeGameRound, GAME_TASK);
 }

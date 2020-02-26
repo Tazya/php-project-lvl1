@@ -1,17 +1,17 @@
 <?php
 
-namespace BrainGames\Games\Gcd;
+namespace BrainGames\games\Gcd;
 
 use function BrainGames\Flow\run;
 
-const GAME_RULES = 'Find the greatest common divisor of given numbers.';
+const GAME_TASK = 'Find the greatest common divisor of given numbers.';
 
 function getExpression()
 {
     $num1 = rand(1, 100);
     $num2 = rand(1, 100);
 
-    return "{$num1} {$num2}";
+    return "$num1 $num2";
 }
 
 function findGcd($num1, $num2)
@@ -26,11 +26,10 @@ function findGcd($num1, $num2)
     return isset($gcd) ? $gcd : '1';
 }
 
-function getCorrect(string $expression)
+function getCorrectAnswer(string $expression)
 {
     $exploded = explode(" ", $expression);
-    $num1 = $exploded[0];
-    $num2 = $exploded[1];
+    [$num1, $num2] = $exploded;
     
     $gcd = findGcd($num1, $num2);
 
@@ -39,16 +38,16 @@ function getCorrect(string $expression)
 
 function startGame()
 {
-    $game = function () {
+    $makeGameRound = function () {
         $question = getExpression();
-        $correct = getCorrect($question);
+        $correctAnswer = getCorrectAnswer($question);
 
         $gameRound = [
             'question' => $question,
-            'correct' => $correct
+            'correctAnswer' => $correctAnswer
         ];
         return $gameRound;
     };
 
-    run($game, GAME_RULES);
+    run($makeGameRound, GAME_TASK);
 }
