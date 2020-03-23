@@ -13,6 +13,7 @@ Command for terminal:
 ```
 composer global require tazya/brain-games
 ```  
+PHP version > 7.1.0 is requred   
 
 ## Brain Even Game
 Answer "yes" if the number is even, othervise answer "no".  

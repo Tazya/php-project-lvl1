@@ -2,6 +2,8 @@
 
 <?php
 
+use function BrainGames\games\Gcd\startGame;
+
 $autoloadPathLocal = __DIR__ . '/../vendor/autoload.php';
 $autoloadPathGlobal = __DIR__ . '/../../../autoload.php';
 
@@ -10,7 +12,5 @@ if (file_exists($autoloadPathLocal)) {
 } else {
     require_once $autoloadPathGlobal;
 }
-
-use function BrainGames\games\Gcd\startGame;
 
 startGame();

@@ -9,8 +9,8 @@ const GAME_TASK = 'What number is missing in the progression?';
 function getProgression(int $start, int $add, int $progressionLength)
 {
     $progression = [];
-    for ($i = 0, $current = $start; $i < $progressionLength; $i++, $current += $add) {
-        $progression[] = $current;
+    for ($i = 0; $i < $progressionLength; $i++) {
+        $progression[] = $start + $add * $i;
     }
     return $progression;
 }

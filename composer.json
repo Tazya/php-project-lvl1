@@ -2,7 +2,7 @@
     "name": "tazya/brain-games",
     "description": "This is Brain Games for a command line",
     "type": "project",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "keywords": ["game", "hexlet", "cli"],
     "license": "MIT",
     "authors": [
@@ -19,8 +19,7 @@
         "bin/brain-prime"
     ],
     "require": {
-        "wp-cli/php-cli-tools": "^0.11.11",
-        "php": ">=7.1.0"
+        "wp-cli/php-cli-tools": "^0.11.11"
     },
     "autoload": {
         "files": [
